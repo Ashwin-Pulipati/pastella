@@ -1,0 +1,200 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: theme('colors.slate.50');
+  --foreground: theme('colors.slate.700');
+  --card: theme('colors.white');
+  --card-foreground: theme('colors.slate.800');
+  --primary: theme('colors.purple.500');
+  --primary-foreground: theme('colors.white');
+  --secondary: theme('colors.pink.500');
+  --secondary-foreground: theme('colors.white');
+  --accent: theme('colors.amber.500');
+  --accent-foreground: theme('colors.white');
+  --muted: theme('colors.slate.200');
+  --muted-foreground: theme('colors.slate.600');
+  --border: theme('colors.slate.200');
+  --ring: theme('colors.purple.500');
+
+  --destructive: theme('colors.red.500');
+  --destructive-foreground: theme('colors.red.50');
+  --success: theme('colors.green.500');
+  --success-foreground: theme('colors.green.50');
+
+  --radius: 0.5rem;
+  --shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.dark {
+  --background: theme('colors.slate.950');
+  --foreground: theme('colors.slate.300');
+  --card: theme('colors.slate.700');
+  --card-foreground: theme('colors.slate.200');
+  --primary: theme('colors.purple.400');
+  --primary-foreground: theme('colors.slate.950');
+  --secondary: theme('colors.pink.400');
+  --secondary-foreground: theme('colors.slate.950');
+  --accent: theme('colors.amber.400');
+  --accent-foreground: theme('colors.slate.950');
+  --muted: theme('colors.slate.800');
+  --muted-foreground: theme('colors.slate.400');
+  --border: theme('colors.slate.800');
+  --ring: theme('colors.purple.400');
+
+  --destructive: theme('colors.red.400');
+  --destructive-foreground: theme('colors.red.950');
+  --success: theme('colors.green.400');
+  --success-foreground: theme('colors.green.950');
+
+  --shadow: 0 1px 2px 0 rgb(0 0 0 / 0.2);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.3), 0 4px 6px -4px rgb(0 0 0 / 0.3);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+
+  --font-sans: var(--font-quicksand);
+  --font-body: var(--font-roboto);
+  --font-special: var(--font-gangOfThree);
+
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 2px);
+  --shadow: var(--shadow);
+  --shadow-lg: var(--shadow-lg);
+
+  --background-image-gradient: linear-gradient(135deg, var(--primary), var(--secondary), var(--accent));
+  --animate-pop-in: pop-in 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  --animate-gradient-rotation: gradient-rotation 6s linear infinite;
+}
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+  button:not([disabled]),
+  [role="button"]:not([disabled]) {
+    cursor: pointer;
+  }
+}
+
+@layer utilities {
+  .gradient-text-clip {
+    @apply inline-block w-fit h-fit bg-clip-text text-transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .animate-gradient {
+    animation: gradient 5s linear infinite;
+    background-size: 200% 200%;
+  }
+  .bg-gradient {
+    background-image: var(--background-image-gradient);
+  }
+  .text-shadow {
+    text-shadow: var(--shadow);
+  }
+  .text-shadow-lg {
+    text-shadow: var(--shadow-lg);
+  }
+  .gradient-animate {
+    background-size: 200% 200%;
+    animation: gradient-pan var(--duration, 10s) var(--timing, linear) infinite alternate;
+  }
+}
+
+
+@layer components {
+  .nav-link {
+    @apply rounded-full px-4 py-1.5 transition-colors duration-200;
+    @apply hover:bg-primary hover:text-primary-foreground;
+    @apply active:bg-primary/90;
+    @apply focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background;
+  }
+
+  .tab-trigger {
+    @apply inline-flex items-center gap-2 px-3 py-2 border-b-2 border-transparent;
+    @apply font-semibold text-muted-foreground transition-colors duration-200;
+  }
+  .tab-trigger:hover {
+    @apply text-primary/80;
+  }
+  .tab-trigger-active {
+    @apply text-primary border-b-primary;
+  }
+
+  .neu-slider {
+    background: var(--slider-gradient, linear-gradient(to right, var(--muted), var(--card)));
+    box-shadow: inset 2px 2px 4px var(--shadow),
+                inset -2px -2px 4px var(--shadow);
+    appearance: none;
+    -webkit-appearance: none;
+    @apply rounded-lg h-3;
+  }
+  .neu-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    @apply w-[1.625rem] h-4 rounded-lg cursor-pointer border-2;
+    background: var(--card);
+    border-color: var(--border);
+    box-shadow: var(--shadow-lg);
+  }
+  .neu-slider::-moz-range-thumb {
+    @apply w-[1.625rem] h-4 rounded-lg cursor-pointer border-2;
+    background: var(--card);
+    border-color: var(--border);
+    box-shadow: var(--shadow-lg);
+  }
+}
+
+@property --gradient-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes pop-in {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes gradient-rotation {
+  from { --gradient-angle: 0deg; }
+  to { --gradient-angle: 360deg; }
+}
+
+@keyframes gradient-pan {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
