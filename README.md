@@ -6,31 +6,34 @@
   <h3 align="center">Pastella</h3>
 
   <p align="center">
-    A modern, feature-rich color palette application for designers and developers.
+    A feature-rich color palette generator for creating beautiful, harmonious pastel color schemes with the help of AI.
     <br />
     <a href="https://pastella.vercel.app/"><strong>View Demo »</strong></a>
   </p>
 </div>
 
-##  About The Project
+## About The Project
 
-Pastella is a web-based application designed to provide a seamless experience for creating, exploring, and managing color palettes. It offers various tools, including a pastel color picker, gradient palette generator, and solid color palette generator. The application also features a collection of pre-made palettes, such as Catppuccin, and allows users to save and share their creations.
+Pastella is a modern, web-based tool designed for designers, developers, and artists to create, explore, and generate stunning color palettes. It specializes in pastel colors and offers various generation methods, including AI-powered suggestions, gradient palettes, and solid color schemes. With a sleek, intuitive interface, Pastella makes it easy to find the perfect colors for your next project.
 
 ## ⚙️ Built With
 
-This project is built with a modern tech stack that ensures scalability, type safety, and a great developer experience.
+This project is built with a modern tech stack that ensures a fast, responsive, and delightful user experience.
 
 *   **Framework:** [Next.js](https://nextjs.org/)
 *   **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+*   **UI Components:** Custom components with [Framer Motion](https://www.framer.com/motion/) for animations.
+*   **AI Integration:** [Google Gemini API](https://ai.google.dev/)
 *   **Deployment:** [Vercel](https://vercel.com/)
 
 ## ✅ Key Features
 
-- **Pastel Color Picker:** A tool for selecting and creating pastel color palettes.
-- **Gradient Palette Generator:** A tool for generating gradient color palettes.
-- **Solid Color Palette Generator:** A tool for creating solid color palettes.
-- **Pre-made Palettes:** A collection of popular color palettes, including Catppuccin.
-- **User-friendly Interface:** A modern and intuitive interface for a seamless user experience.
+- **AI Palette Generation:** Describe your desired theme or mood, and let the AI generate a unique pastel palette for you.
+- **Gradient Palettes:** Create and customize beautiful gradient color schemes.
+- **Solid Palettes:** Explore and generate palettes with solid, harmonious colors.
+- **Pastel Color Picker:** A specialized color picker for finding the perfect pastel shades.
+- **Catppuccin Theme:** Includes the popular Catppuccin color palettes.
+- **Responsive Design:** A beautiful, intuitive interface that works on all devices.
 
 ## ▶️ Getting Started
 
@@ -55,19 +58,23 @@ Make sure you have Node.js and npm installed on your machine.
     ```sh
     npm install
     ```
-3.  **Run the development server:**
+3.  **Set up your environment variables:**
+    Create a `.env.local` file in the root of your project and add your Google Gemini API key.
+    ```env
+    # Google Gemini API Key
+    GEMINI_API_KEY=
+    ```
+4.  **Run the development server:**
     ```sh
     npm run dev
     ```
-4.  Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
+5.  Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-##  Usage
+## Usage
 
-Pastella is designed to be intuitive. Here’s a typical user story:
+Pastella is designed to be intuitive. A user can visit the site, explore the different palette generation options, and create a palette that fits their needs. They can then copy the color codes to use in their own projects.
 
-A designer is looking for a pastel color palette for their new project. They use the pastel color picker to create a custom palette and then use the gradient palette generator to create a matching gradient. They save the palette and share it with their team.
-
-##  Contributing
+## Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
@@ -85,11 +92,11 @@ You can also report a bug or request a feature by opening an issue:
 - [Request Feature](https://github.com/Ashwin-Pulipati/Pastella/issues)
 
 
-##  License
+## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
-##  Contact
+## Contact
 
 Ashwin Pulipati - [LinkedIn](https://www.linkedin.com/in/ashwinpulipati/) - ashwinpulipati@gmail.com
 
