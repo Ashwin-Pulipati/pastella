@@ -101,3 +101,8 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 Ashwin Pulipati - [LinkedIn](https://www.linkedin.com/in/ashwinpulipati/) - ashwinpulipati@gmail.com
 
 Project Link: [https://github.com/Ashwin-Pulipati/Pastella](https://github.com/Ashwin-Pulipati/Pastella)
+
+
+## Acknowledgements
+
+*   [Catppuccin](https://github.com/catppuccin/catppuccin) - A community-driven pastel theme that inspires and informs the color options available in Pastella. Released under the MIT License.
