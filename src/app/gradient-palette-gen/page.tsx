@@ -19,6 +19,8 @@ import GradientSkeleton from "@/components/GradientPaletteGen/GradientSkeleton";
 import PaletteGeneratorLayout from "@/components/PaletteGenerator/PaletteGeneratorLayout";
 import Notification from "@/components/PaletteGenerator/Notification";
 
+
+// --- MAIN PAGE COMPONENT ---
 export default function GradientPaletteGenerator() {
   const [strategy, setStrategy] = useState<GenerationStrategy>("analogous");
   const [paletteSize, setPaletteSize] = useState<number>(3);
@@ -117,13 +119,13 @@ animation: gradient-pan ${settings.animationDuration}s ${settings.animationStyle
             handleKeywordToggle,
           }}
         />
-
-        <GradientOptions
-          settings={settings}
-          setSettings={setSettings}
-          isAnimationEnabled={isAnimationEnabled}
-          setIsAnimationEnabled={setIsAnimationEnabled}
-        />
+        
+          <GradientOptions
+            settings={settings}
+            setSettings={setSettings}
+            isAnimationEnabled={isAnimationEnabled}
+            setIsAnimationEnabled={setIsAnimationEnabled}
+          />
 
         {isAnimationEnabled && (
           <AnimationControls

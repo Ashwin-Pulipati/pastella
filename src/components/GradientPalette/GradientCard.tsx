@@ -7,34 +7,8 @@ import Color from "color";
 import copy from "copy-to-clipboard";
 import { Check, Copy } from "lucide-react";
 import React, { memo, useCallback, useMemo, useState } from "react";
+import { GradientSettings } from "@/types/pastelPalette.types";
 import GradientSettingsPopover from "./GradientSettingsPopover";
-
-interface GradientSettings {
-  style: "linear" | "radial";
-  direction:
-    | "to right"
-    | "to bottom right"
-    | "to bottom"
-    | "to bottom left"
-    | "to left"
-    | "to top left"
-    | "to top"
-    | "to top right";
-  shape: "ellipse" | "circle";
-  position:
-    | "center"
-    | "top"
-    | "bottom"
-    | "left"
-    | "right"
-    | "top left"
-    | "top right"
-    | "bottom left"
-    | "bottom right";
-  isAnimated: boolean;
-  duration: number;
-  timing: "linear" | "ease" | "ease-in" | "ease-out";
-}
 
 interface Palette {
   id: number;

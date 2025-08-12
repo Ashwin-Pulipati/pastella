@@ -5,7 +5,15 @@ export type RGBColor = { r: number; g: number; b: number };
 export type PaletteType = "solid" | "gradient" | "animated";
 export type GenerationMethod = "curated" | "ai" | "scratch";
 export type AiMode = "keywords" | "chat";
-
+export interface GradientSettings {
+  style: GradientStyle;
+  direction: LinearDirection;
+  shape: RadialShape;
+  position: RadialPosition;
+  isAnimated: boolean;
+  duration: number;
+  timing: AnimationTiming;
+}
 export type GenerationStrategy =
   | "analogous"
   | "monochromatic"
@@ -22,7 +30,8 @@ export type LinearDirection =
   | "to left"
   | "to top left"
   | "to top"
-  | "to top right";
+  | "to top right"
+  |"Custom Angle...";
 
 export type RadialShape = "ellipse" | "circle";
 

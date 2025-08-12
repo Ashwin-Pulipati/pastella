@@ -36,6 +36,7 @@ const GradientOptions: React.FC<Props> = ({
   const {
     style,
     linearDirection,
+    customLinearAngle,
     radialShape,
     radialPosition,
   } = settings;
@@ -154,6 +155,27 @@ const GradientOptions: React.FC<Props> = ({
                   className="text-sm"
                 />
               </div>
+              {linearDirection === "Custom Angle..." && (
+                <div className="relative z-20">
+                  <input
+                    type="number"
+                    id="custom-linear-angle-input"
+                    value={customLinearAngle}
+                    onChange={(e) => {
+                      const angle = parseInt(e.target.value, 10);
+                      handleSettingChange(
+                        "customLinearAngle",
+                        isNaN(angle) ? 0 : angle
+                      );
+                    }}
+                    className="w-full rounded-xl border border-border bg-muted p-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-card"
+                    placeholder="e.g., 45"
+                  />
+                  <span className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground">
+                    deg
+                  </span>
+                </div>
+              )}
             </div>
           )}
 
