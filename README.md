@@ -105,4 +105,4 @@ Project Link: [https://github.com/Ashwin-Pulipati/Pastella](https://github.com/A
 
 ## Acknowledgements
 
-*   [Catppuccin](https://github.com/catppuccin/catppuccin) - A community-driven pastel theme that inspires and informs the color options available in Pastella. Released under the MIT License.
+[Catppuccin](https://github.com/catppuccin/catppuccin) - A community-driven pastel theme that inspires and informs the color options available in Pastella. Released under the MIT License.
