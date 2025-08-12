@@ -82,7 +82,7 @@ const Dropdown: React.FC<DropdownProps> = ({
       <div
         className={cn(
           "absolute right-0 z-50 mt-2 w-56 origin-top-right transition-all duration-200",
-          "bg-background rounded-xl border border-border shadow-lg p-1.5",
+          "bg-background rounded-xl border border-border shadow-lg p-1.5 max-h-56 overflow-y-auto",
           open
             ? "scale-100 opacity-100 font-sans font-bold"
             : "scale-95 opacity-0 pointer-events-none",
@@ -119,7 +119,7 @@ const Dropdown: React.FC<DropdownProps> = ({
                   className={cn(
                     "flex items-center gap-3 w-full px-3 py-2 text-sm text-left rounded-lg transition-colors text-foreground",
                     "focus:outline-none focus:bg-primary focus:text-primary-foreground",
-                    "hover:bg-primary hover:text-primary-foreground",
+                    "hover:bg-primary hover:text-primary-foreground ",
                     { "bg-primary text-primary-foreground": isActive }
                   )}
                 >

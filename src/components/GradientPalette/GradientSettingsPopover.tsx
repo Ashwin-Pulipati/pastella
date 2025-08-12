@@ -4,20 +4,9 @@ import { Button } from "@/components/ui/Button";
 import Dropdown from "@/components/ui/Dropdown";
 import NumberStepper from "@/components/ui/NumberStepper";
 import { cn } from "@/lib/utils";
-import { AnimationTiming, GradientStyle, LinearDirection, RadialPosition, RadialShape } from "@/types/pastelPalette.types";
-import { Palette as PaletteIcon, Wind, MoreHorizontal } from "lucide-react";
-import React, { memo, useCallback, useEffect, useRef, useState } from "react";
-
-
-interface GradientSettings {
-  style: GradientStyle;
-  direction: LinearDirection;
-  shape: RadialShape;
-  position: RadialPosition;
-  isAnimated: boolean;
-  duration: number;
-  timing: AnimationTiming;
-}
+import { AnimationTiming, GradientSettings, LinearDirection, RadialPosition } from "@/types/pastelPalette.types";
+import { MoreHorizontal, PaletteIcon, Wind } from "lucide-react";
+import { memo, useCallback, useEffect, useRef, useState } from "react";
 
 const toSentenceCase = (str: string) =>
   str.charAt(0).toUpperCase() + str.slice(1);

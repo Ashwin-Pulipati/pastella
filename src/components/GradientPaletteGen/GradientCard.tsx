@@ -7,18 +7,8 @@ import Color from "color";
 import { cn } from "@/lib/utils";
 import Tooltip from "@/components/ui/Tooltip";
 import GradientSettingsPopover from "./GradientSettingsPopover";
-import { AnimationTiming, GradientStyle, LinearDirection, RadialPosition, RadialShape } from "@/types/pastelPalette.types";
+import { GradientSettings } from "@/types/pastelPalette.types";
 
-
-export interface GradientSettings {
-  style: GradientStyle;
-  direction: LinearDirection;
-  shape: RadialShape;
-  position: RadialPosition;
-  isAnimated: boolean;
-  duration: number;
-  timing: AnimationTiming;
-}
 
 interface Palette {
   id: number;

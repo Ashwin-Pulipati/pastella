@@ -1,18 +1,18 @@
 "use client";
 
 import Dropdown from "@/components/ui/Dropdown";
-import { AnimationTimingFunction } from "@/types/pastelPalette.types";
+import { AnimationTiming } from "@/types/pastelPalette.types";
 import React from "react";
 
 interface AnimationControlsProps {
-  animationStyle: AnimationTimingFunction;
-  setAnimationStyle: (style: AnimationTimingFunction) => void;
+  animationStyle: AnimationTiming;
+  setAnimationStyle: (style: AnimationTiming) => void;
   animationDuration: number;
   setAnimationDuration: (duration: number) => void;
 }
 
 const ANIMATION_EASING_OPTIONS: {
-  id: AnimationTimingFunction;
+  id: AnimationTiming;
   label: string;
 }[] = [
   { id: "linear", label: "Linear" },

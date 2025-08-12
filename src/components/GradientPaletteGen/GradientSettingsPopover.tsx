@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/Button";
 import Dropdown from "@/components/ui/Dropdown";
 import NumberStepper from "@/components/ui/NumberStepper";
-import { GradientSettings } from "./GradientCard";
+import { AnimationTiming, GradientSettings, LinearDirection, RadialPosition } from "@/types/pastelPalette.types";
 
 const toSentenceCase = (str: string) =>
   str.charAt(0).toUpperCase() + str.slice(1);
@@ -150,7 +150,11 @@ const GradientSettingsPopover = memo(
                       items={linearDirections.map((dir) => ({
                         id: dir,
                         label: toSentenceCase(dir),
-                        onClick: () => handleSettingChange("direction", dir),
+                        onClick: () =>
+                          handleSettingChange(
+                            "direction",
+                            dir as LinearDirection
+                          ),
                       }))}
                     />
                   </div>
@@ -189,7 +193,11 @@ const GradientSettingsPopover = memo(
                         items={radialPositions.map((pos) => ({
                           id: pos,
                           label: toSentenceCase(pos),
-                          onClick: () => handleSettingChange("position", pos),
+                          onClick: () =>
+                            handleSettingChange(
+                              "position",
+                              pos as RadialPosition
+                            ),
                         }))}
                       />
                     </div>
@@ -221,7 +229,8 @@ const GradientSettingsPopover = memo(
                     items={animationTimings.map((t) => ({
                       id: t,
                       label: toSentenceCase(t),
-                      onClick: () => handleSettingChange("timing", t),
+                      onClick: () =>
+                        handleSettingChange("timing", t as AnimationTiming),
                     }))}
                   />
                 </div>
