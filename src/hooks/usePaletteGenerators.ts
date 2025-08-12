@@ -30,62 +30,19 @@ function usePaletteGenerators({
   setIsGenerating,
   showNotification,
 }: UsePaletteGeneratorsProps) {
-
   const generatePalette = useCallback(async () => {
     setIsGenerating(true);
-    const prompt = `
-You are an expert color palette designer specializing in beautiful, attractive, modern, futuristic, and soft pastel colors.
-Your task is to generate a harmonically correct pastel color palette based on the user's request.
-
-**Palette Constraints:**
-- Color Harmony: ${strategy}
-- Number of Colors: ${paletteSize}
-- Palette Type: ${paletteType}
-- User's Theme/Idea: "${
-      aiPrompt ||
-      selectedKeywords.join(", ") ||
-      "A surprising and beautiful combination"
-    }"
-
-**Your Goal:**
-Create the most aesthetically pleasing palette possible that fits the theme. You have complete creative freedom to invent entirely new pastel colors or draw inspiration from well-known pastel color names. The final result must be a cohesive, professional-quality palette.
-
-**Output Format:**
-The output MUST be a valid JSON object following this exact structure: {"palette": [{"name": "A Creative Color Name", "hex": "#RRGGBB"}]}
-`;
-
-    const payload = {
-      contents: [{ role: "user", parts: [{ text: prompt }] }],
-      generationConfig: {
-        responseMimeType: "application/json",
-        responseSchema: {
-          type: "OBJECT",
-          properties: {
-            palette: {
-              type: "ARRAY",
-              items: {
-                type: "OBJECT",
-                properties: {
-                  hex: { type: "STRING" },
-                  name: { type: "STRING" },
-                },
-                required: ["hex", "name"],
-              },
-            },
-          },
-          required: ["palette"],
-        },
-      },
-    };
-
-    const apiKey = process.env.NEXT_PUBLIC_GEMINI_API_KEY;
-    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
-
     try {
-      const response = await fetch(apiUrl, {
+      const response = await fetch("/api/generate-palette", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+        body: JSON.stringify({
+          strategy,
+          paletteSize,
+          paletteType,
+          aiPrompt,
+          selectedKeywords,
+        }),
       });
 
       if (!response.ok) {
@@ -120,9 +77,9 @@ The output MUST be a valid JSON object following this exact structure: {"palette
       setIsGenerating(false);
     }
   }, [
+    strategy,
     paletteSize,
     paletteType,
-    strategy,
     aiPrompt,
     selectedKeywords,
     setCurrentPalette,
