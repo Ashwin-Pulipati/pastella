@@ -16,6 +16,10 @@
 
 Pastella is a modern, web-based tool designed for designers, developers, and artists to create, explore, and generate stunning color palettes. It specializes in pastel colors and offers various generation methods, including AI-powered suggestions, gradient palettes, and solid color schemes. With a sleek, intuitive interface, Pastella makes it easy to find the perfect colors for your next project.
 
+
+https://github.com/user-attachments/assets/3bd4d92a-4b7c-407e-9d1a-3feba3aa9ec0
+
+
 ## ⚙️ Built With
 
 This project is built with a modern tech stack that ensures a fast, responsive, and delightful user experience.
