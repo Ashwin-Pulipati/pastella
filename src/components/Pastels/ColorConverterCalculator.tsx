@@ -74,9 +74,9 @@ export const ColorConverterCalculator: React.FC = () => {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ duration: 0.4, ease: [0.25, 1, 0.5, 1] }}
-              className="fixed top-0 right-0 z-50 h-full w-full max-w-sm bg-gradient p-0.5 sm:h-auto sm:top-1/2 sm:-translate-y-1/2 rounded-[18px] md:rounded-l-[18px]"
+              className="fixed top-0 right-0 z-[60] h-full w-full max-w-sm bg-gradient p-0.5 sm:h-auto sm:top-1/2 sm:-translate-y-1/2 rounded-l-[18px] md:rounded-l-[18px]"
             >
-              <div className="flex h-full w-full flex-col gap-5 bg-card p-4 sm:p-6 rounded-2xl md:rounded-l-3xl overflow-y-auto">
+              <div className="flex h-full w-full flex-col gap-5 bg-card p-4 sm:p-6 rounded-l-2xl md:rounded-l-3xl overflow-y-auto">
                 <div className="flex items-center justify-between">
                   <h3 className="text-lg font-sans font-bold tracking-wider text-card-foreground">
                     Color Converter

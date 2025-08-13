@@ -5,6 +5,7 @@ import { Quicksand, Roboto } from "next/font/google";
 import localFont from "next/font/local";
 import Navbar from "../components/Navbar";
 import "./globals.css";
+import Scroller from "@/components/ui/Scroller";
 
 const quickSand = Quicksand({
   variable: "--font-quicksand",
@@ -81,6 +82,7 @@ export default function RootLayout({
           <Navbar />
           {children}
           <Footer />
+          <Scroller />
         </NextJSThemeProvider>
       </body>
     </html>
