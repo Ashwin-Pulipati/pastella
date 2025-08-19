@@ -12,7 +12,7 @@
   </p>
 </div>
 
-## About The Project
+## 📝 About The Project
 
 Pastella is a modern, web-based tool designed for designers, developers, and artists to create, explore, and generate stunning color palettes. It specializes in pastel colors and offers various generation methods, including AI-powered suggestions, gradient palettes, and solid color schemes. With a sleek, intuitive interface, Pastella makes it easy to find the perfect colors for your next project.
 
@@ -74,11 +74,11 @@ Make sure you have Node.js and npm installed on your machine.
     ```
 5.  Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-## Usage
+## 🚀 Usage
 
 Pastella is designed to be intuitive. A user can visit the site, explore the different palette generation options, and create a palette that fits their needs. They can then copy the color codes to use in their own projects.
 
-## Contributing
+## 🤝 Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
@@ -96,17 +96,17 @@ You can also report a bug or request a feature by opening an issue:
 - [Request Feature](https://github.com/Ashwin-Pulipati/Pastella/issues)
 
 
-## License
+## 📄 License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
-## Contact
+## 💌 Contact
 
 Ashwin Pulipati - [LinkedIn](https://www.linkedin.com/in/ashwinpulipati/) - ashwinpulipati@gmail.com
 
-Project Link: [https://github.com/Ashwin-Pulipati/Pastella](https://github.com/Ashwin-Pulipati/Pastella)
+Project Link: [https://github.com/Ashwin-Pulipati/Pastella](https://github.com/Ashwin-Pulipati/pastella)
 
 
-## Acknowledgements
+## 🙏🏻 Acknowledgements
 
 [Catppuccin](https://github.com/catppuccin/catppuccin) - A community-driven pastel theme that inspires and informs the color options available in Pastella. Released under the MIT License.
