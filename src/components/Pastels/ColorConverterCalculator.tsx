@@ -47,7 +47,7 @@ export const ColorConverterCalculator: React.FC = () => {
         variant="tertiary"
         onClick={() => setIsOpen(!isOpen)}
         className={cn(
-          "fixed top-1/2 -translate-y-1/2 right-0 z-40 px-3 py-5 sm:px-4 sm:py-6 rounded-l-2xl transition-all duration-300 ease-in-out hover:pr-5 sm:hover:pr-6",
+          "fixed top-1/2 -translate-y-1/2 right-0 px-3 py-5 sm:px-4 sm:py-6 rounded-l-2xl transition-all duration-300 ease-in-out hover:pr-5 sm:hover:pr-6",
           isOpen && "opacity-0 pointer-events-none"
         )}
         aria-label="Open Color Converter"
@@ -64,7 +64,7 @@ export const ColorConverterCalculator: React.FC = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setIsOpen(false)}
-              className="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm sm:hidden"
+              className="h-full fixed inset-0 z-40 bg-black/50 backdrop-blur-sm sm:hidden"
               aria-hidden="true"
             />
 
@@ -74,7 +74,7 @@ export const ColorConverterCalculator: React.FC = () => {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ duration: 0.4, ease: [0.25, 1, 0.5, 1] }}
-              className="fixed top-0 right-0 z-[60] h-full w-full max-w-sm bg-gradient p-0.5 sm:h-auto sm:top-1/2 sm:-translate-y-1/2 rounded-l-[18px] md:rounded-l-[18px]"
+              className="fixed top-0 right-0 z-[100] h-full w-full max-w-sm bg-gradient p-0.5 sm:h-auto sm:top-1/2 sm:-translate-y-1/2 rounded-l-[18px] md:rounded-l-[18px]"
             >
               <div className="flex h-full w-full flex-col gap-5 bg-card p-4 sm:p-6 rounded-l-2xl md:rounded-l-3xl overflow-y-auto">
                 <div className="flex items-center justify-between">

@@ -4,12 +4,14 @@
 import React from "react";
 import copy from "copy-to-clipboard";
 import CatppuccinColorSwatch from "./TailwindColorSwatch";
+import { cn } from "@/lib/utils";
 
 interface CatppuccinShadeGridProps {
   colorsObject: Record<string, string[]>;
+  themeName: string;
 }
 
-const CatppuccinShadeGrid = ({ colorsObject }: CatppuccinShadeGridProps) => {
+const CatppuccinShadeGrid = ({ colorsObject, themeName }: CatppuccinShadeGridProps) => {
   const shadeKeys = [
     "50",
     "100",
@@ -39,14 +41,26 @@ const CatppuccinShadeGrid = ({ colorsObject }: CatppuccinShadeGridProps) => {
         {shadeKeys.map((key) => (
           <div
             key={key}
-            className="text-center text-xs font-semibold text-muted-foreground"
+            className={cn(
+              "text-center text-xs font-semibold",
+              themeName === "latte"
+                ? "text-muted-foreground"
+                : "text-muted dark:text-muted-foreground"
+            )}
           >
             {key}
           </div>
         ))}
         {Object.entries(colorsObject).map(([colorName, shades]) => (
           <React.Fragment key={colorName}>
-            <div className="pr-4 text-right text-sm font-bold text-foreground">
+            <div
+              className={cn(
+                "pr-4 text-right text-sm font-bold text-muted dark:text-foreground",
+                themeName === "latte"
+                  ? "text-muted-foreground"
+                  : "text-muted dark:text-muted-foreground"
+              )}
+            >
               {colorName}
             </div>
             {shades.map((hex, idx) => (

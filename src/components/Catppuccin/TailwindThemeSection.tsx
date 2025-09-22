@@ -19,9 +19,9 @@ const CatppuccinTailwindThemeSection = ({
 
   const gradientStopMap: Record<string, string> = {
     latte: "from-transparent to-muted-foreground/50",
-    frappe: "from-transparent to-muted-foreground/50",
-    macchiato: "from-transparent to-muted-foreground/50",
-    mocha: "from-transparent to-muted-foreground/50",
+    frappe: "from-transparent to-muted/60 dark:to-muted-foreground/50",
+    macchiato: "from-transparent to-muted/60 dark:to-muted-foreground/50",
+    mocha: "from-transparent to-muted/60 dark:to-muted-foreground/50",
   };
 
   return (
@@ -29,7 +29,11 @@ const CatppuccinTailwindThemeSection = ({
       ref={ref}
       className={cn(
         "mx-auto max-w-7xl transition-opacity duration-1000 ease-in",
-        inView ? "opacity-100" : "opacity-0"
+        inView ? "opacity-100" : "opacity-0",
+        themeName === "latte" && "border border-muted w-full p-8 rounded-2xl",
+        themeName === "frappe" && "bg-[#303446] w-full p-8 rounded-2xl",
+        themeName === "macchiato" && "bg-[#24273A] w-full p-8 rounded-2xl",
+        themeName === "mocha" && "bg-[#1E1E2E] w-full p-8 rounded-2xl"
       )}
     >
       <div className="flex items-center justify-center space-x-4 mb-6 sm:mb-8">
@@ -39,7 +43,12 @@ const CatppuccinTailwindThemeSection = ({
             gradientStopMap[themeName]
           )}
         />
-        <h2 className="text-center font-sans text-2xl md:text-3xl font-bold uppercase tracking-widest text-muted-foreground">
+        <h2
+          className={cn(
+            "text-center font-sans text-2xl md:text-3xl font-bold uppercase tracking-widest",
+            themeName === "latte" ? "text-muted-foreground": "text-muted dark:text-muted-foreground"
+          )}
+        >
           {themeName}
         </h2>
         <div
@@ -49,7 +58,7 @@ const CatppuccinTailwindThemeSection = ({
           )}
         />
       </div>
-      <CatppuccinShadeGrid colorsObject={colorsObject} />
+      <CatppuccinShadeGrid colorsObject={colorsObject} themeName={themeName} />
     </div>
   );
 };

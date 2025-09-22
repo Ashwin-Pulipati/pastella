@@ -61,7 +61,7 @@ const NavItems = () => {
       </div>
 
       {/* Mobile Navigation */}
-      <MobileMenu />
+        <MobileMenu />
     </nav>
   );
 };
