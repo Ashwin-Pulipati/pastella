@@ -1,14 +1,13 @@
 "use client";
 
+import CatppuccinThemeSection from "@/components/Catppuccin/BaseColorThemeSection";
 import { ColorConverterCalculator } from "@/components/Pastels/ColorConverterCalculator";
-import { catppuccinHex } from "@/constants/catpuccin.constants";
+import { catppuccinHex } from "@/constants/catppuccin.constants";
 import { ExternalLink } from "lucide-react";
 import Link from "next/link";
-import React from "react";
-import CatppuccinThemeSection from "@/components/Catppuccin/BaseColorThemeSection";
 
 // Main Page Component
-export default function Catpuccin() {
+export default function Catppuccin() {
   const baseThemes = Object.entries(catppuccinHex);
 
   return (
@@ -35,7 +34,7 @@ export default function Catpuccin() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 font-semibold text-primary underline underline-offset-4 hover:opacity-80 transition-opacity"
             >
-              Official Catpuccin Palette
+              Official Catppuccin Palette
               <ExternalLink className="h-4 w-4" />
             </Link>
             .

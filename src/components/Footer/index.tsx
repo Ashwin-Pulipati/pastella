@@ -14,7 +14,7 @@ const Footer = () => {
     } else if (item.children) {
       const childLinks = item.children.map((child) => {
         const newLabel =
-          item.label === "Catpuccin"
+          item.label === "Catppuccin"
             ? `${item.label} ${child.label}`
             : `${child.label} ${item.label}`;
         return {

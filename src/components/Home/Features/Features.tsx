@@ -26,7 +26,7 @@ const cardData: CardData[] = [
     description: "Design and animate stunning linear and radial gradients.",
   },
   {
-    href: "/catpuccin-base",
+    href: "/Catppuccin-base",
     icon: <SwatchBook size={32} strokeWidth={1.5} />,
     title: "Theme Systems",
     description: "Full theming systems like Catppuccin for professional UIs.",
@@ -49,7 +49,6 @@ const cardStyles = [
 ];
 
 const Features = () => {
-
   return (
     // Added responsive padding for the whole section
     <div className="mx-auto w-full max-w-7xl px-2 sm:px-6 lg:px-8 xl:px-0">

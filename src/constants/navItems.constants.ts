@@ -15,13 +15,13 @@ export const navItems: NavItem[] = [
   { label: "Pastel Picker", href: "/pastel-picker" },
   { label: "Pastels", href: "/pastels" },
   {
-    label: "Catpuccin",
+    label: "Catppuccin",
     children: [
-      { id: "catpuccin-base", label: "Base Colors", href: "/catpuccin-base" },
+      { id: "catppuccin-base", label: "Base Colors", href: "/catppuccin-base" },
       {
-        id: "catpuccin-tailwind",
+        id: "catppuccin-tailwind",
         label: "Tailwind Colors",
-        href: "/catpuccin-tailwind",
+        href: "/catppuccin-tailwind",
       },
     ],
   },

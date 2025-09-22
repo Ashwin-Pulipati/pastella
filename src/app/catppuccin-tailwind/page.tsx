@@ -1,15 +1,14 @@
-// catpuccin-tailwind/page.tsx
+// Catppuccin-tailwind/page.tsx
 "use client";
 
 import CatppuccinTailwindThemeSection from "@/components/Catppuccin/TailwindThemeSection";
 import { ColorConverterCalculator } from "@/components/Pastels/ColorConverterCalculator";
-import { catpuccinTailwindCSSDaisyUI } from "@/constants/catpuccin.constants";
+import { CatppuccinTailwindCSSDaisyUI } from "@/constants/catppuccin.constants";
 import { ExternalLink } from "lucide-react";
 import Link from "next/link";
-import React from "react";
 
-export default function CatpuccinShades() {
-  const shadePalettes = Object.entries(catpuccinTailwindCSSDaisyUI);
+export default function CatppuccinShades() {
+  const shadePalettes = Object.entries(CatppuccinTailwindCSSDaisyUI);
 
   return (
     <div className="relative w-full">

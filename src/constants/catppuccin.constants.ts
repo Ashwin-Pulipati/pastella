@@ -113,7 +113,7 @@ export const catppuccinHex = {
   },
 };
 
-export const catpuccinTailwindCSSDaisyUI = {
+export const CatppuccinTailwindCSSDaisyUI = {
   latte: {
     Rosewater: [
       "#E6C6C4",
