@@ -78,6 +78,22 @@ Make sure you have Node.js and npm installed on your machine.
 
 Pastella is designed to be intuitive. A user can visit the site, explore the different palette generation options, and create a palette that fits their needs. They can then copy the color codes to use in their own projects.
 
+## 🏆 Contributors
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://www.linkedin.com/in/nishanthpilli/">
+        <img src="https://tinyurl.com/nishanth-profile" width="100px;" alt="Nishanth Pilli"/><br />
+      </a>
+      <span><b>Nishanth Pilli</b></span><br />
+      <span>(Product Designer)</span><br />
+      <a href="https://www.linkedin.com/in/nishanthpilli/">LinkedIn</a> | 
+      <a href="https://www.nishanthpilli.com/">Portfolio</a>
+    </td>
+  </tr>
+</table>
+
 ## 🤝 Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
