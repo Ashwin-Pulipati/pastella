@@ -64,7 +64,7 @@ export const ColorConverterCalculator: React.FC = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setIsOpen(false)}
-              className="h-full fixed inset-0 z-40 bg-black/50 backdrop-blur-sm sm:hidden"
+              className="h-full fixed inset-0 z-[100] bg-black/50 backdrop-blur-sm sm:hidden"
               aria-hidden="true"
             />
 
@@ -74,9 +74,9 @@ export const ColorConverterCalculator: React.FC = () => {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ duration: 0.4, ease: [0.25, 1, 0.5, 1] }}
-              className="fixed top-0 right-0 z-[100] h-full w-full max-w-sm bg-gradient p-0.5 sm:h-auto sm:top-1/2 sm:-translate-y-1/2 rounded-l-[18px] md:rounded-l-[18px]"
+              className="fixed inset-0 z-[100] bg-gradient p-0.5 sm:h-auto sm:top-1/2 sm:-translate-y-1/2 sm:max-w-sm sm:right-0 sm:left-auto rounded-l-[18px] md:rounded-l-[18px]"
             >
-              <div className="flex h-full w-full flex-col gap-5 bg-card p-4 sm:p-6 rounded-l-2xl md:rounded-l-3xl overflow-y-auto">
+              <div className="flex h-full w-full flex-col gap-5 bg-card p-4 sm:p-6 rounded-l-2xl md:rounded-l-3xl overflow-y-auto pt-20 sm:pt-6">
                 <div className="flex items-center justify-between">
                   <h3 className="text-lg font-sans font-bold tracking-wider text-card-foreground">
                     Color Converter
