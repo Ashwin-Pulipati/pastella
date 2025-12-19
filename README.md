@@ -41,6 +41,11 @@ This project is built with a modern tech stack that ensures a fast, responsive, 
 
 ## 🏗️ System Architecture
 
+<div align="center">
+  <img alt="Pastella System Architecture Diagram" width="900" src="https://github.com/user-attachments/assets/78301126-5e36-48f1-98e9-207823c38f04" />
+</div>
+</br>
+
 Pastella is a high-performance color exploration platform built on Next.js 15. It bridges the gap between generative AI and precise design systems, ensuring that AI-suggested palettes are technically valid and accessible.
 
 ### 1. Presentation Layer (UI/UX)
