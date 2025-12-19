@@ -39,6 +39,23 @@ This project is built with a modern tech stack that ensures a fast, responsive, 
 - **Catppuccin Theme:** Includes the popular Catppuccin color palettes.
 - **Responsive Design:** A beautiful, intuitive interface that works on all devices.
 
+## 🏗️ System Architecture
+
+Pastella is a high-performance color exploration platform built on Next.js 15. It bridges the gap between generative AI and precise design systems, ensuring that AI-suggested palettes are technically valid and accessible.
+
+### 1. Presentation Layer (UI/UX)
+- **Next.js 15 App Router:** Utilizes the latest routing paradigm for optimized page loads and seamless transitions.
+- **Tailwind CSS 4:** Leverages the high-performance CSS engine for styling, utilizing modern color spaces like OKLCH for more perceptually uniform color rendering.
+- **Framer Motion:** Orchestrates a motion-heavy UX, providing tactile feedback during palette generation and interaction.
+
+### 2. Logic & Utility Layer (The "Brain")
+- **Custom Hook Architecture:** Logic is abstracted into specialized hooks like `usePaletteGenerators` and `usePastelPicker`. This decouples the UI from the complex state management required for real-time color manipulation.
+- **Deterministic Color Math:** A robust utility layer handles bidirectional conversions between HEX, RGB, HSL, CMYK, and OKLCH. This ensures that AI-generated suggestions are accurately mapped to standard design tokens.
+
+### 3. API & AI Integration Layer
+- **Server-Side Proxy:** A Next.js API route acts as a secure intermediary between the client and the Gemini AI model. This protects API keys and allows for server-side response validation.
+- **Intelligent Prompt Engineering:** Communicates with Google Gemini 2.0 Flash using structured prompting. The system enforces Structured JSON Output, ensuring the AI returns a deterministic array of color objects that the frontend can parse safely.
+
 ## ▶️ Getting Started
 
 To get a local copy up and running, follow these simple steps.
